@@ -1,5 +1,5 @@
 import { Router } from "express";
-//import ejs from 'ejs';
+import ejs from 'ejs';
 const mainRouter = Router();
 
 mainRouter.get('/login', (req, res) => {

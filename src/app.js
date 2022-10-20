@@ -32,13 +32,14 @@ app.use(express.json());
 //ROUTERS
 app.use(mainRouter);
 
+app.use(express.static(join(__dirname, 'public')));
 
 
 app.get('/', (req,res) => {
     res.render('index.ejs',{
         tittle:'Data de los puntos de venta',
     })
-
+    
 });
 
 
