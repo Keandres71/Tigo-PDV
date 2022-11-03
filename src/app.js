@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
-import  express  from "express";    
-import ejs from 'ejs';
-import cors from "cors";
+import dotenv from "dotenv"; // VARIABLES DE ENTORNO
+import  express  from "express"; //FRAMEWORK O LIBRERIA    
+import ejs from 'ejs'; // MOTOR DE PLANTILLAS
+import cors from "cors"; 
 import morgan from "morgan";
 import path from 'path';
 import {dirname, join} from 'path';
@@ -55,6 +55,6 @@ app.use((req,res) => {
 
 
 
-dbConnect();
+//dbConnect();
 app.listen(PORT);
 console.log(`Server in port ${PORT}`);
