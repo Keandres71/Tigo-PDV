@@ -7,7 +7,7 @@ import path from 'path';
 import {dirname, join} from 'path';
 import { fileURLToPath } from "url";
 
-import dbConnect from "../config/mongo";
+//import dbConnect from "../config/mongo";
 
 // MAIN PATH
 dotenv.config(); // Toma por defecto el ( .env )
@@ -16,12 +16,11 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 //console.log(__dirname) // = 'D:\Usuarios\kquiroca\Documents\Tigo\src'
 
 
-//ROUTES
+//ROUTERS
 import mainRouter from "./routes/mainRouter.js";
 
 // APLICATION
 const app = express();  
-
 
 // SETTINGS
 app.set('case sensitive routing', true); //ESTRICTO CON CARACTERES DE RUTA
@@ -36,7 +35,7 @@ app.use(cors()); // Cors para todos los origenes sean permitidos
 app.use(morgan('dev')); //Middleware de registro de solicitudes HTTP (Desarrollo)
 app.use(express.json());
 
-//ROUTERS
+//USE ROUTERS
 app.use(mainRouter);
 
 app.use(express.static(join(__dirname, 'public')));

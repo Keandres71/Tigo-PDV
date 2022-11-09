@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+/* import mongoose from "mongoose";
 
 
 export const dbConnect = () => {
@@ -16,3 +16,4 @@ export const dbConnect = () => {
 }
 
 export {dbConnect};
+ */
